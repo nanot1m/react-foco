@@ -3,10 +3,11 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import Foco from '../src';
+import { TestElements } from './TestElements';
 
-storiesOf('Foco', module).add('clicks', () => <DemoComponent />);
+storiesOf('Foco', module).add('clicks_and_focuses', () => <DemoComponent />);
 
-enum ComponentActions {
+export enum ComponentActions {
   None = 'None',
   ClickInside = 'ClickInside',
   ClickOutside = 'ClickOutside',
@@ -16,26 +17,50 @@ enum ComponentActions {
 
 class DemoComponent extends React.Component {
   public state = {
-    lastAction: ComponentActions.None
+    clickStatus: ComponentActions.None,
+    focusStatus: ComponentActions.None
   };
 
   render() {
     return (
-      <Foco
-        onClickOutside={() => {
-          this.setState({ lastAction: ComponentActions.ClickOutside });
-          console.log('click outside');
-        }}
-      >
-        <div
-          onClick={() =>
-            this.setState({ lastAction: ComponentActions.ClickInside })
-          }
-          style={{ backgroundColor: 'hotpink', color: 'white', padding: 40 }}
+      <>
+        <Foco
+          onClickOutside={() => {
+            this.setState({ clickStatus: ComponentActions.ClickOutside });
+          }}
+          onFocusOutside={() => {
+            this.setState({ focusStatus: ComponentActions.FocusOutside });
+          }}
         >
-          Last action: {this.state.lastAction}
+          <div
+            data-testID={TestElements.InnerNode}
+            onClick={() =>
+              this.setState({ clickStatus: ComponentActions.ClickInside })
+            }
+            onFocus={() =>
+              this.setState({ focusStatus: ComponentActions.FocusInside })
+            }
+            style={{ backgroundColor: 'hotpink', color: 'white', padding: 40 }}
+          >
+            <button>Inner button</button>
+            <div>
+              Click status:{' '}
+              <span data-testID={TestElements.ClickStatusNode}>
+                {this.state.clickStatus}
+              </span>
+            </div>
+            <div>
+              Focus status:{' '}
+              <span data-testID={TestElements.FocusStatusNode}>
+                {this.state.focusStatus}
+              </span>
+            </div>
+          </div>
+        </Foco>
+        <div style={{ padding: 40 }} data-testID={TestElements.OuterNode}>
+          <button>Outer button</button>
         </div>
-      </Foco>
+      </>
     );
   }
 }
