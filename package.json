@@ -8,18 +8,29 @@
   "author": "Timur Khazamov <t1mmaas@skbkontur.ru>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
-    "precommit": "lint-staged"
+    "build": "rimraf lib && tsc",
+    "precommit": "lint-staged",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.4.3",
+    "@storybook/addon-links": "^3.4.3",
+    "@storybook/addons": "^3.4.3",
+    "@storybook/react": "^3.4.3",
     "@types/node": "8.5.5",
     "@types/react": "^16.3.13",
     "@types/react-dom": "^16.0.5",
+    "@types/storybook__react": "^3.0.7",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.5",
     "prettier": "^1.12.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "rimraf": "^2.6.2",
+    "ts-loader": "3.5.0",
     "typescript": "^2.8.3"
   },
   "peerDependencies": {
