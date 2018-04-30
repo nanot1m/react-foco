@@ -2,6 +2,8 @@
 
 React component for handling clicks and focuses outside, which works with portals
 
+[Demo](https://codesandbox.io/s/wy8n9koxo7)
+
 ## Usage
 
 ```javascript
