@@ -3,6 +3,10 @@
   "version": "0.1.1",
   "description": "React component for handling clicks and focuses outside, which works with portals",
   "main": "lib/index.js",
+  "files": [
+    "lib/index.js",
+    "lib/index.d.ts"
+  ],
   "repository": "git@github.com:nanot1m/react-foco.git",
   "author": "Timur Khazamov <t1mmaas@skbkontur.ru>",
   "license": "MIT",
@@ -40,7 +44,7 @@
     "rimraf": "^2.6.2",
     "ts-jest": "^22.4.4",
     "ts-loader": "3.5.0",
-    "typescript": "^2.8.3",
+    "typescript": "^3.2.4",
     "wait-on": "^2.1.0"
   },
   "peerDependencies": {
@@ -65,6 +69,7 @@
     "createPortal"
   ],
   "jest": {
+    "testURL": "http://localhost",
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
