@@ -6,7 +6,6 @@
     "jsx": "react",
     "declaration": true,
     "outDir": "./lib",
-    "importHelpers": true,
     "strict": true,
     "esModuleInterop": true
   },

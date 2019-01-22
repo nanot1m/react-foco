@@ -1,22 +1,27 @@
 {
   "name": "react-foco",
   "version": "1.0.0",
-  "description": "React component for handling clicks and focuses outside, which works with portals",
+  "description":
+    "React component for handling clicks and focuses outside, which works with portals",
   "main": "lib/index.js",
-  "files": [
-    "lib/index.js",
-    "lib/index.d.ts"
-  ],
+  "files": ["lib/index.js", "lib/index.d.ts"],
   "repository": "git@github.com:nanot1m/react-foco.git",
   "author": "Timur Khazamov <t1mmaas@skbkontur.ru>",
   "license": "MIT",
+  "size-limit": [
+    {
+      "size": "1 KB",
+      "path": "lib/index.js"
+    }
+  ],
   "scripts": {
     "build-storybook": "build-storybook",
     "build": "rimraf lib && tsc",
     "deploy": "gh-pages -d storybook-static",
     "precommit": "lint-staged",
     "predeploy": "build-storybook",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
+    "size": "size-limit",
     "storybook": "start-storybook -p 6006",
     "test": "wait-on http-get://localhost:6006 && jest"
   },
@@ -42,6 +47,7 @@
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "rimraf": "^2.6.2",
+    "size-limit": "^0.21.1",
     "ts-jest": "^22.4.4",
     "ts-loader": "3.5.0",
     "typescript": "^3.2.4",
@@ -51,14 +57,9 @@
     "react": ">16.0.0",
     "react-dom": ">16.0.0"
   },
-  "dependencies": {
-    "tslib": "^1.9.0"
-  },
+  "dependencies": {},
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
+    "*.{ts,tsx}": ["prettier --single-quote --write", "git add"]
   },
   "keywords": [
     "react",
@@ -74,13 +75,6 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
   }
 }
