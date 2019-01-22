@@ -1,6 +1,6 @@
 {
   "name": "react-foco",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "React component for handling clicks and focuses outside, which works with portals",
   "main": "lib/index.js",
   "files": [
