@@ -1,10 +1,12 @@
 {
   "name": "react-foco",
-  "version": "1.0.0",
-  "description":
-    "React component for handling clicks and focuses outside, which works with portals",
+  "version": "1.0.1",
+  "description": "React component for handling clicks and focuses outside, which works with portals",
   "main": "lib/index.js",
-  "files": ["lib/index.js", "lib/index.d.ts"],
+  "files": [
+    "lib/index.js",
+    "lib/index.d.ts"
+  ],
   "repository": "git@github.com:nanot1m/react-foco.git",
   "author": "Timur Khazamov <t1mmaas@skbkontur.ru>",
   "license": "MIT",
@@ -59,7 +61,10 @@
   },
   "dependencies": {},
   "lint-staged": {
-    "*.{ts,tsx}": ["prettier --single-quote --write", "git add"]
+    "*.{ts,tsx}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
   },
   "keywords": [
     "react",
@@ -75,6 +80,13 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }
