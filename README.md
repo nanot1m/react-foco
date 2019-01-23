@@ -4,6 +4,10 @@ React component for handling clicks and focuses outside, which works with portal
 
 [Demo](https://codesandbox.io/s/wy8n9koxo7)
 
+## Changelog
+
+https://github.com/nanot1m/react-foco/releases
+
 ## Usage
 
 ```javascript
