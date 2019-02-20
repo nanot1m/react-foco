@@ -1,5 +1,4 @@
-/// <reference types="react" />
-import React from "react";
+import React from 'react';
 export interface TooltipProps {
     children: React.ReactNode;
     anchor: HTMLElement;

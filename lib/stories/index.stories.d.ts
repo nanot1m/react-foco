@@ -3,5 +3,5 @@ export declare enum ComponentActions {
     ClickInside = "ClickInside",
     ClickOutside = "ClickOutside",
     FocusInside = "FocusInside",
-    FocusOutside = "FocusOutside",
+    FocusOutside = "FocusOutside"
 }
