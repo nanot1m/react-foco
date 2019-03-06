@@ -4,7 +4,7 @@ React component for handling clicks and focuses outside
 
 - Takes care of children rendered in **react portals**
 - Handles clicks and **focuses** outside
-- **Small** — less then 600b minified and gzipped
+- **Small** — less then 600b minified and gzipped, has no dependencies
 - TypeScript friendly
 
 ```javascript
