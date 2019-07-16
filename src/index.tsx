@@ -68,7 +68,7 @@ export default class Foco extends React.Component<FocoProps> {
 
   private flush() {
     document.removeEventListener('mousedown', this.documentClick);
-    document.removeEventListener('focus', this.documentFocus);
+    document.removeEventListener('focus', this.documentFocus, true);
     document.removeEventListener('touchstart', this.documentClick);
   }
 
